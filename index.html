@@ -1,1 +1,428 @@
-Meu site do github
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel L. Schirmer - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://github.com/fluidicon.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo"></div>
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfólio</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#experience" class="nav-link">Experiência</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Gabriel L. Schirmer</h1>
+            <h2 class="hero-subtitle">Estudante de Engenharia de Computação</h2>
+            <p class="hero-tagline">Transformando ideias em soluções tecnológicas</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Ver Projetos
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Contato
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/schirmr" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/schirmr" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:schirmr@outlook.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Olá! Eu sou Gabriel Lorenson Schirmer</h3>
+                    <p>Apaixonado por tecnologia e inovação, busco constantemente desenvolver projetos que unam criatividade e conhecimento técnico. Com foco em desenvolvimento web, sistemas embarcados e inteligência artificial, estou sempre em busca de novos desafios.</p>
+                    <p>Atualmente cursando o 3º semestre de Engenharia de Computação na UFSM, tenho experiência prática em diversas linguagens de programação e frameworks modernos.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3º</div>
+                            <div class="stat-label">Semestre</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Linguagens</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Anos Estudando</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Development</span>
+                        <h3 class="project-title">Site para a Associação Hospitalar Bom Pastor de Santo Augusto - RS</h3>
+                        <p class="project-description">Aplicação web full-stack para publicação de notícias e informações sobre a associação</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Wordpress</span>
+                            <span class="tech-tag">Elementor</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.hospibompastor.com.br" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">IA &amp; Acessibilidade</span>
+                        <h3 class="project-title">IA Aplicada a Interpretação de Libras</h3>
+                        <p class="project-description">Aplicação desktop integrada à IA para leitura e interpretação de linguagem de sinais, traduzindo em tempo real os gestos da Libras utilizando a câmera do computador e imprimindo o texto na tela da interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mika-font/20-import-nome_da_equipe" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Trabalho de Estrutura de Dados</span>
+                        <h3 class="project-title">Totem para retirada de fichas para atendimento</h3>
+                        <p class="project-description">Simulador de um totem para retirada de fichas em um ambiente de atendimento ao público, com integração em um televisor para a apresentação da fila.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">TAD</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/schirmr/Trabalho_Estrutura_de_Dados" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programação</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C/C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Flask</li>
+                        <li>Express</li>
+                        <li>TailwindCSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bancos de Dados</h3>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Ferramentas &amp; DevOps</h3>
+                    <ul class="skill-list">
+                        <li>Git &amp; GitHub</li>
+                        <li>Docker</li>
+                        <li>VS Code</li>
+                        <li>Linux</li>
+                        <li>Arduino</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-heart"></i> Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Trabalho em equipe</li>
+                        <li>Resolução de problemas</li>
+                        <li>Comunicação</li>
+                        <li>Aprendizado rápido</li>
+                        <li>Gestão de tempo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Experiência &amp; Educação</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-type education">Educação</span>
+                        <h3 class="timeline-title">Engenharia de Computação - UFSM</h3>
+                        <p class="timeline-description">Cursando 3º semestre com foco em desenvolvimento de software, sistemas embarcados e inteligência artificial</p>
+                    </div>
+                    <div class="timeline-date">2024 - Presente</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-type experience">Experiência</span>
+                        <h3 class="timeline-title">Bolsa de Monitoria</h3>
+                        <p class="timeline-description">Auxílio na elaboração de materiais didáticos e suporte a alunos em disciplinas de Cálculo</p>
+                    </div>
+                    <div class="timeline-date">2024 - Presente</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos conversar!</h3>
+                    <p>Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto interessante ou apenas quer trocar ideias sobre tecnologia, não hesite em entrar em contato!</p>
+                    
+                    <ul class="contact-methods">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:schirmr@outlook.com" style="color: var(--primary-color); text-decoration: none;">schirmr@outlook.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong>Telefone</strong><br>
+                                <span style="color: var(--text-secondary);">+55 55 99983-5594</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <strong>LinkedIn</strong><br>
+                                <a href="https://linkedin.com/in/schirmr" target="_blank" style="color: var(--primary-color); text-decoration: none;">linkedin.com/in/schirmr</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <strong>GitHub</strong><br>
+                                <a href="https://github.com/schirmr" target="_blank" style="color: var(--primary-color); text-decoration: none;">github.com/schirmr</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full-width">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Gabriel Lorenson Schirmer</h4>
+                    <p style="color: var(--text-secondary);">Estudante de Engenharia de Computação apaixonado por criar soluções tecnológicas inovadoras.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Conecte-se</h4>
+                    <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
+                        <a href="https://github.com/schirmr" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/schirmr" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:schirmr@outlook.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gabriel Lorenson Schirmer. Todos os direitos reservados. | Feito com ❤️ por Gabriel Lorenson Schirmer</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
