@@ -591,6 +591,7 @@ body {
     position: relative;
     margin-bottom: 2rem;
     width: 45%;
+    padding: 0 1rem;
 }
 
 .timeline-item:nth-child(odd) {
@@ -607,6 +608,15 @@ body {
     border-radius: 10px;
     border: 1px solid var(--border-color);
     position: relative;
+}
+
+/* adiciona margem para não ficar sob a data (desktop) */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 50px; /* espaço para a data à direita */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50px; /* espaço para a data à esquerda */
 }
 
 .timeline-item:nth-child(odd) .timeline-content::after {
@@ -641,6 +651,7 @@ body {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
+    z-index: 2;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
@@ -900,19 +911,24 @@ textarea.form-control {
     }
 
     .timeline::before {
-        left: 0;
+        left: 1rem;
     }
 
     .timeline-item {
         width: 100%;
         left: 0 !important;
-        padding-left: 3rem;
+        padding-left: 1rem;
     }
 
     .timeline-item .timeline-date {
-        left: -80px !important;
+        position: relative;
+        left: auto !important;
         right: auto !important;
-        transform: rotate(-90deg);
+        top: auto !important;
+        transform: none !important;
+        display: inline-block;
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
     }
 
     .timeline-content::after {
@@ -934,9 +950,16 @@ textarea.form-control {
     }
 
     .timeline-item .timeline-date {
-        left: -90px !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        display: inline-block;
+        margin: 0 0 0.4rem 0;
         font-size: 0.8rem;
         padding: 0.3rem 0.6rem;
+        white-space: nowrap;
     }
 }
 
