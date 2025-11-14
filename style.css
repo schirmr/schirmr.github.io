@@ -866,7 +866,7 @@ textarea.form-control {
     transform: translateY(-3px);
 }
 
-/* Mobile Styles */
+/* Styles p/ celulares */
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -964,6 +964,61 @@ textarea.form-control {
         font-size: 0.8rem;
         padding: 0.3rem 0.6rem;
         white-space: nowrap;
+    }
+}
+
+/* iPhone 12 mini, iPhone 13 mini e telas entre 360–380px */
+@media (max-width: 380px) and (min-width: 360px) {
+
+    .social-icons {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        margin: 0 0.5rem;
+    }
+
+    .hero {
+        padding-top: 110px; 
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+}
+/* Telas pequenas iPhone SE (≤ 350px) */
+@media (max-width: 350px) {
+    .hero{
+        padding-top: 120px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .social-links{
+        margin: 1rem;
+    }
+
+    *{
+        max-width: 100%;
+    }
+}
+
+/* Telas EXTREMAMENTE pequenas (Apple Watch, mini-smartphones, ≤ 250px) */
+@media (max-width: 250px) {
+    body > * {
+        display: none !important;
+    }
+
+    .small-warning {
+        display: block !important;
+        font-size: 14px;
+        text-align: center;
+        padding: 1rem;
+        line-height: 1.4;
     }
 }
 
