@@ -1,4 +1,4 @@
-// Loading Screen
+        // Tela de carregamento
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
             setTimeout(() => {
@@ -6,7 +6,7 @@
             }, 1000);
         });
 
-        // Mobile Navigation
+        // Nav mobile
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
@@ -15,7 +15,7 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
+        // Fechar menu mobile ao clicar em um link
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -23,7 +23,7 @@
             });
         });
 
-        // Navbar scroll effect
+        // Efeito de scroll na navbar
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
@@ -33,7 +33,7 @@
             }
         });
 
-        // Active nav link on scroll
+        // Link ativo na navegação ao rolar a página
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
 
@@ -56,7 +56,7 @@
             });
         });
 
-        // Intersection Observer for animations
+        // Observador de interseção para animações
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -67,7 +67,7 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Animate skill progress bars
+                    // Animar barras de progresso de habilidades
                     if (entry.target.id === 'skills') {
                         animateSkillBars();
                     }
@@ -79,7 +79,7 @@
             observer.observe(el);
         });
 
-        // Animate skill progress bars
+        // Animar barras de progresso de habilidades
         function animateSkillBars() {
             const skillBars = document.querySelectorAll('.skill-progress-bar');
             skillBars.forEach(bar => {
@@ -90,7 +90,7 @@
             });
         }
 
-        // Back to top button
+        // Botão voltar ao topo
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -108,7 +108,7 @@
             });
         }
 
-        // Contact form handler
+        // Manipulador do formulário de contato
         function handleFormSubmit(event) {
             event.preventDefault();
             
@@ -119,20 +119,20 @@
             const subject = formData.get('subject');
             const message = formData.get('message');
             
-            // Create mailto link
+            // Criar link mailto
             const mailtoLink = `mailto:contato@exemplo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`)}`;
             
-            // Open email client
+            // Abrir cliente de email
             window.location.href = mailtoLink;
             
-            // Show success message
+            // Mostrar mensagem de sucesso
             alert('Obrigado pela sua mensagem! Seu cliente de email será aberto para enviar a mensagem.');
             
-            // Reset form
+            // Resetar formulário
             form.reset();
         }
 
-        // Smooth scrolling for anchor links
+        // Rolagem suave para links de âncora
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -147,7 +147,7 @@
             });
         });
 
-        // Add some interactive particles effect to hero section
+        // Adicionar efeito de partículas interativas na seção hero
         function createParticles() {
             const hero = document.querySelector('.hero');
             const particleCount = 50;
@@ -167,7 +167,7 @@
             }
         }
 
-        // Add floating animation
+        // Adicionar animação flutuante
         const style = document.createElement('style');
         style.textContent = `
             @keyframes float {
@@ -177,10 +177,10 @@
         `;
         document.head.appendChild(style);
 
-        // Initialize particles after page load
+        // Inicializar partículas após o carregamento da página
         window.addEventListener('load', createParticles);
 
-        // Add typing effect to hero title
+        // Adicionar efeito de digitação ao título hero
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.textContent = '';
@@ -196,7 +196,7 @@
             setTimeout(type, 1500);
         }
 
-        // Initialize typing effect
+        // Inicializar efeito de digitação
         window.addEventListener('load', () => {
             const heroTitle = document.querySelector('.hero-title');
             if (heroTitle) {
