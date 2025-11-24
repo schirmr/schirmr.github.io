@@ -14,41 +14,43 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #071023 0%, #0b1220 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #e6eef8;
         }
 
         .container {
-            background-color: white;
+            background-color: rgba(10,14,22,0.9);
             padding: 3rem;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(2,6,23,0.7);
             text-align: center;
             max-width: 500px;
             width: 90%;
             animation: fadeIn 1s ease-in-out;
+            border: 1px solid rgba(255,255,255,0.04);
         }
 
         .icon {
             font-size: 4rem;
             margin-bottom: 1rem;
-            display: block;
+            display: inline-block;
             animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.6));
         }
 
         h1 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
+            color: #e6f0ff;
         }
 
         p {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1.05rem;
+            color: #a9bdcf;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
@@ -56,16 +58,18 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #3498db;
+            background-color: #4f46e5;
             color: white;
             text-decoration: none;
             border-radius: 25px;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 700;
+            transition: background 0.25s, transform 0.12s;
+            box-shadow: 0 6px 18px rgba(79,70,229,0.18);
         }
 
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #4338ca;
+            transform: translateY(-2px);
         }
 
         /* Animações */
@@ -76,7 +80,7 @@
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
             100% { transform: translateY(0px); }
         }
     </style>
@@ -88,7 +92,7 @@
         <h1>Site em Construção</h1>
         <p>Estamos preparando algo incrível por aqui. Volte em breve para conferir as novidades!</p>
         
-        <a href="../index.html" class="btn" onclick="location.reload()">Voltar</a>
+        <a href="../index.html" class="btn">Voltar</a>
     </div>
 
 </body>
