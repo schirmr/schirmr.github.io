@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Currículo Acadêmico - Gabriel L. Schirmer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="icon" type="image/x-icon" href="https://github.com/fluidicon.png">
+</head>
+<body>
+	<div class="small-warning" style="display: none;">
+		A tela do seu dispositivo é muito pequena para visualizar este site. <br>
+		Recomendamos usar uma largura de tela de no mínimo <strong>350px</strong>.
+	</div>
+
+	<div class="loader" id="loader">
+		<div class="loader-content">
+			<div class="loader-logo"></div>
+			<p>Carregando...</p>
+		</div>
+	</div>
+
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../index.html" class="nav-logo">Portfólio</a>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="../index.html#home" class="nav-link">Início</a></li>
+				<li><a href="../index.html#about" class="nav-link">Sobre</a></li>
+				<li><a href="../index.html#projects" class="nav-link">Projetos</a></li>
+				<li><a href="../index.html#skills" class="nav-link">Habilidades</a></li>
+				<li><a href="../index.html#experience" class="nav-link">Experiência</a></li>
+				<li><a href="../index.html#contact" class="nav-link">Contato</a></li>
+				<li><a href="love.html" class="nav-link">Interesses</a></li>
+				<li><a href="curriculum.html" class="nav-link active">Currículo</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero" id="curriculum-hero">
+		<div class="hero-content">
+			<h1 class="hero-title" data-typewriter-text="Currículo Acadêmico">Currículo Acadêmico</h1>
+			<h2 class="hero-subtitle">Disciplinas concluídas em Engenharia de Computação (UFSM)</h2>
+			<p class="hero-tagline">Registro das matérias já aprovadas, com destaques e médias finais.</p>
+			<div class="hero-buttons">
+				<a href="#courses" class="btn btn-primary">
+					<i class="fas fa-graduation-cap"></i>
+					Ver disciplinas
+				</a>
+				<a href="../index.html#contact" class="btn btn-outline">
+					<i class="fas fa-envelope"></i>
+					Entrar em contato
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="courses" class="section fade-in">
+		<div class="container">
+			<h2 class="section-title">Disciplinas Concluídas</h2>
+			<p class="section-description">Acompanhe abaixo todas as disciplinas já concluídas ao longo do curso, com informações sobre período cursado, carga horária, principais tópicos e a média final obtida.</p>
+			<div class="courses-meta">
+				<span><i class="fas fa-tasks"></i> Total de disciplinas: 29</span>
+				<span><i class="fas fa-clock"></i> Carga horária cumprida: 1095h</span>
+				<span><i class="fas fa-calendar-check"></i> Última atualização: Dez 2025</span>
+			</div>
+
+			<div class="courses-grid">
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>90h</span>
+					</div>
+					<h3 class="course-name">Algoritmos e Programação</h3>
+					<p class="course-summary">Introdução à lógica de programação estruturada em C e resolução de problemas.</p>
+					<div class="course-info">
+						<span><i class="fas fa-code"></i> Linguagem C</span>
+						<span><i class="fas fa-diagram-project"></i> Algoritmos</span>
+					</div>
+					<ul class="course-tags">
+						<li>Vetor</li>
+						<li>Função</li>
+						<li>Ponteiros</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 7.14</p>
+						<p><strong>Período cursado:</strong> 2023/2</p>
+						<p><strong>Destaques:</strong> Implementação de algoritmos clássicos e primeiros projetos práticos.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>90h</span>
+					</div>
+					<h3 class="course-name">Cálculo A</h3>
+					<p class="course-summary">Estudo de limites, derivadas, integrais e aplicações fundamentais.</p>
+					<div class="course-info">
+						<span><i class="fas fa-calculator"></i> Funções reais</span>
+						<span><i class="fas fa-chart-line"></i> Aplicações</span>
+					</div>
+					<ul class="course-tags">
+						<li>Limites</li>
+						<li>Derivadas</li>
+						<li>Integral</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 8.11</p>
+						<p><strong>Período cursado:</strong> 2023/2</p>
+						<p><strong>Destaques:</strong> Resolução de problemas aplicados à engenharia e modelagem de curvas.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Introdução a Engenharia</h3>
+					<p class="course-summary">Atuação, regulamentação e habilidades para criar soluções em engenharia.</p>
+					<div class="course-info">
+						<span><i class="fas fa-cube"></i> Regulamentação</span>
+						<span><i class="fas fa-shapes"></i> Equipe</span>
+					</div>
+					<ul class="course-tags">
+						<li>CREA</li>
+						<li>Tecnologia</li>
+						<li>Atuação Profissional</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 9.55</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Atuação profissional, regulamentação, ética e desenvolvimento de projetos.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>45h</span>
+					</div>
+					<h3 class="course-name">Matemática Básica</h3>
+					<p class="course-summary">Revisão do Ensino Médio: números reais, funções, polinômios, trigonometria, geometria analítica e números complexos, com aplicações.</p>
+					<div class="course-info">
+						<span><i class="fas fa-calculator"></i> Álgebra</span>
+						<span><i class="fas fa-chart-lline"></i> Funções</span>
+                        <span><i class="fas fa-circle-notch"></i> Trigonometria</span>
+					</div>
+					<ul class="course-tags">
+						<li>Números Reais</li>
+						<li>Trigonometria</li>
+						<li>Números Complexos</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 8.80</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Laboratórios de validação, exercícios aplicados e resolução de problemas.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Matemática Computacional I</h3>
+					<p class="course-summary">Métodos numéricos básicos para resolução de modelos, análise de funções e visualização de dados.</p>
+					<div class="course-info">
+						<span><i class="fas fa-chart-line"></i> Gráficos</span>
+						<span><i class="fas fa-cogs"></i> Métodos Numéricos</span>
+					</div>
+					<ul class="course-tags">
+						<li>Interpolação</li>
+						<li>Zeros de Funções</li>
+						<li>Derivada Numérica</li>
+                        <li>Integração Numérica</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 10.00</p>
+						<p><strong>Período cursado:</strong> 2025/2</p>
+						<p><strong>Destaques:</strong> Construção de gráficos, métodos de Newton e bisseção, e aplicações em análise de dados.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Meio Ambiente e Sustentabilidade na Engenharia</h3>
+					<p class="course-summary">Fundamentos ambientais, sustentabilidade, legislação e práticas de engenharia para processos mais limpos.</p>
+					<div class="course-info">
+						<span><i class="fas fa-leaf"></i> Sustentabilidade</span>
+						<span><i class="fas fa-balance-scale"></i> Legislação Ambiental</span>
+					</div>
+					<ul class="course-tags">
+						<li>ODS</li>
+						<li>Resíduos Sólidos</li>
+						<li>Economia Circular</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 9.50</p>
+						<p><strong>Período cursado:</strong> 2025/2</p>
+						<p><strong>Destaques:</strong> Estudos de caso, análise de ciclo de vida e aplicações de tecnologias limpas.</p>
+					</div>
+				</article>
+
+				
+
+
+
+			</div>
+
+			<p class="section-description" style="margin-top: 3rem;">
+                OBS: Este currículo acadêmico contem períodos cursados distintos, pois entrei no curso através do processo de transferência interna. Aproveitando algumas matérias já cursadas anteriormente no curso de Redes de Computadores. 
+               <br> Sempre que novas disciplinas forem concluídas, esta página será atualizada para refletir o andamento do curso.</p>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<h4>Gabriel Lorenson Schirmer</h4>
+					<p style="color: var(--text-secondary);">Estudante de Engenharia de Computação apaixonado por criar soluções tecnológicas inovadoras.</p>
+				</div>
+				<div class="footer-section">
+					<h4>Links Rápidos</h4>
+					<ul class="footer-links">
+						<li><a href="../index.html#home">Início</a></li>
+						<li><a href="../index.html#projects">Projetos</a></li>
+						<li><a href="love.html">Interesses</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h4>Conecte-se</h4>
+					<div class="social-links" style="margin-top: 1rem;">
+						<a href="https://github.com/schirmr" target="_blank" class="social-link" title="GitHub">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://linkedin.com/in/schirmr" target="_blank" class="social-link" title="LinkedIn">
+							<i class="fab fa-linkedin"></i>
+						</a>
+						<a href="mailto:schirmr@outlook.com" class="social-link" title="Email">
+							<i class="fas fa-envelope"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2025 Gabriel Lorenson Schirmer. Todos os direitos reservados. | Feito com ❤️ por Gabriel Lorenson Schirmer</p>
+			</div>
+		</div>
+	</footer>
+
+	<button class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+
+	<script src="../script.js"></script>
+</body>
+</html>

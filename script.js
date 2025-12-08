@@ -200,6 +200,7 @@
         window.addEventListener('load', () => {
             const heroTitle = document.querySelector('.hero-title');
             if (heroTitle) {
-                typeWriter(heroTitle, 'Gabriel L. Schirmer', 150);
+                const typewriterText = heroTitle.getAttribute('data-typewriter-text') || heroTitle.textContent || 'Gabriel L. Schirmer';
+                typeWriter(heroTitle, typewriterText, 150);
             }
         });
