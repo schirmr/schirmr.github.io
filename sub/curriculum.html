@@ -32,8 +32,8 @@
 				<li><a href="../index.html#skills" class="nav-link">Habilidades</a></li>
 				<li><a href="../index.html#experience" class="nav-link">Experiência</a></li>
 				<li><a href="../index.html#contact" class="nav-link">Contato</a></li>
-				<li><a href="love.html" class="nav-link">Interesses</a></li>
 				<li><a href="curriculum.html" class="nav-link active">Currículo</a></li>
+				<li><a href="love.html" class="nav-link">Interesses</a></li>
 			</ul>
 			<div class="hamburger" id="hamburger">
 				<span></span>
@@ -66,13 +66,27 @@
 			<h2 class="section-title">Disciplinas Concluídas</h2>
 			<p class="section-description">Acompanhe abaixo todas as disciplinas já concluídas ao longo do curso, com informações sobre período cursado, carga horária, principais tópicos e a média final obtida.</p>
 			<div class="courses-meta">
-				<span><i class="fas fa-tasks"></i> Total de disciplinas: 29</span>
-				<span><i class="fas fa-clock"></i> Carga horária cumprida: 1095h</span>
+				<span><i class="fas fa-tasks"></i> Total de disciplinas: 13</span>
+				<span><i class="fas fa-clock"></i> Carga horária cumprida: 810h</span>
 				<span><i class="fas fa-calendar-check"></i> Última atualização: Dez 2025</span>
 			</div>
 
+			<div class="courses-filter" role="group" aria-label="Filtrar disciplinas por semestre">
+				<button type="button" class="filter-button active" data-semester-filter="all">Todas</button>
+				<button type="button" class="filter-button" data-semester-filter="1">1º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="2">2º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="3">3º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="4">4º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="5">5º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="6">6º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="7">7º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="8">8º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="9">9º semestre</button>
+				<button type="button" class="filter-button" data-semester-filter="10">10º semestre</button>
+			</div>
+
 			<div class="courses-grid">
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>90h</span>
@@ -95,7 +109,7 @@
 					</div>
 				</article>
 
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>90h</span>
@@ -118,7 +132,7 @@
 					</div>
 				</article>
 
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>30h</span>
@@ -141,7 +155,7 @@
 					</div>
 				</article>
 
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>45h</span>
@@ -165,7 +179,7 @@
 					</div>
 				</article>
 
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>30h</span>
@@ -189,7 +203,7 @@
 					</div>
 				</article>
 
-				<article class="course-card" tabindex="0">
+				<article class="course-card" tabindex="0" data-semester="1">
 					<div class="course-badge">
 						<span>1º semestre</span>
 						<span>30h</span>
@@ -212,15 +226,249 @@
 					</div>
 				</article>
 
+				<article class="course-card not-completed" tabindex="0" data-semester="1" data-status="not-completed">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>60h</span>
+					</div>
+					<h3 class="course-name">Engenharia Econômica</h3>
+					<p class="course-summary">Conceitos de economia e matemática financeira aplicados à análise e decisão de investimentos.</p>
+					<div class="course-info">
+						<span><i class="fas fa-chart-dollar"></i> Análise de Investimentos</span>
+						<span><i class="fas fa-percentage"></i> Juros & Amortização</span>
+					</div>
+					<ul class="course-tags">
+						<li>Mat. Financeira</li>
+						<li>Análise Determinística</li>
+						<li>Amortização</li>
+						<li>Juros</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Status:</strong> Não cursada ainda</p>
+						<p><strong>Média final:</strong> —</p>
+						<p><strong>Período:</strong> —</p>
+						<p><strong>Observação:</strong> Planejada para próximos semestres.</p>
+					</div>
+				</article>
+
+				<article class="course-card not-completed" tabindex="0" data-semester="1" data-status="not-completed">
+					<div class="course-badge">
+						<span>1º semestre</span>
+						<span>45h</span>
+					</div>
+					<h3 class="course-name">Desenho Técnico p/ Engenharia</h3>
+					<p class="course-summary">Representação gráfica, vistas ortográficas e perspectivas aplicadas à elaboração de projetos de engenharia.</p>
+					<div class="course-info">
+						<span><i class="fas fa-drafting-compass"></i> Vistas & Perspectivas</span>
+						<span><i class="fas fa-ruler-combined"></i> Normas & Escalas</span>
+					</div>
+					<ul class="course-tags">
+						<li>Perspectivas</li>
+						<li>Normas Técnicas</li>
+						<li>Vistas Ortográficas</li>
+						<li>Desenho Projetivo</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Status:</strong> Não cursada ainda</p>
+						<p><strong>Média final:</strong> —</p>
+						<p><strong>Período:</strong> —</p>
+						<p><strong>Observação:</strong> Planejada para próximos semestres.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>90h</span>
+					</div>
+					<h3 class="course-name">Álgebra Linear e Geometria Analítica</h3>
+					<p class="course-summary">Fundamentos de matrizes, vetores e espaço tridimensional para resolver problemas de álgebra linear e geometria analítica.</p>
+					<div class="course-info">
+						<span><i class="fas fa-shapes"></i> Matrizes & Vetores</span>
+						<span><i class="fas fa-cube"></i> Espaço 3D</span>
+					</div>
+					<ul class="course-tags">
+						<li>Matrizes</li>
+						<li>Sistemas Lineares</li>
+						<li>Transformações Lineares</li>
+						<li>Autovalores</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 9.39</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Aplicações em gráficos 3D, sistemas lineares e transformações geométricas.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>90h</span>
+					</div>
+					<h3 class="course-name">Cálculo B</h3>
+					<p class="course-summary">Estudo de funções de várias variáveis, derivadas parciais, integrais múltiplas e teoremas fundamentais do cálculo vetorial aplicados à engenharia.</p>
+					<div class="course-info">
+						<span><i class="fas fa-wave-square"></i> Multivariáveis</span>
+						<span><i class="fas fa-vector-square"></i> Campos Vetoriais</span>
+					</div>
+					<ul class="course-tags">
+						<li>Derivadas Parciais</li>
+						<li>Integrais Múltiplas</li>
+						<li>Campos Vetoriais</li>
+						<li>Green & Stokes</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 8.23</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Aplicações em superfícies, otimização multivariável e integrais de linha e fluxo.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>60h</span>
+					</div>
+					<h3 class="course-name">Estrutura de Dados</h3>
+					<p class="course-summary">Estudo de representações estruturadas de dados e implementação de soluções eficientes usando listas, pilhas, filas, árvores e grafos.</p>
+					<div class="course-info">
+						<span><i class="fas fa-sitemap"></i> Árvores & Grafos</span>
+						<span><i class="fas fa-stream"></i> Listas & Filas</span>
+					</div>
+					<ul class="course-tags">
+						<li>Listas</li>
+						<li>Pilhas & Filas</li>
+						<li>Árvores</li>
+						<li>Grafos</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 8.90</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Implementação de ADTs, análise de eficiência e resolução de problemas com árvores e grafos.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>60h</span>
+					</div>
+					<h3 class="course-name">Física Geral I</h3>
+					<p class="course-summary">Fundamentos da mecânica newtoniana, analisando movimentos, forças, energia e dinâmica de corpos rígidos para modelar fenômenos físicos.</p>
+					<div class="course-info">
+						<span><i class="fas fa-arrows-alt"></i> Movimento & Forças</span>
+						<span><i class="fas fa-sync-alt"></i> Rotação & Energia</span>
+					</div>
+					<ul class="course-tags">
+						<li>Cinemática</li>
+						<li>Leis de Newton</li>
+						<li>Energia & Trabalho</li>
+						<li>Rotação</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 7.00</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Modelagem de movimentos, aplicação das Leis de Newton e análise de sistemas com energia e rotação.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>15h</span>
+					</div>
+					<h3 class="course-name">Física Experimental I</h3>
+					<p class="course-summary">Experimentos de mecânica newtoniana com análise gráfica e estatística para investigar movimentos, forças e conservação de energia e momento.</p>
+					<div class="course-info">
+						<span><i class="fas fa-chart-line"></i> Análise Gráfica</span>
+						<span><i class="fas fa-atom"></i> Mecânica Experimental</span>
+					</div>
+					<ul class="course-tags">
+						<li>Experimentos</li>
+						<li>Análise Estatística</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 8.40</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Coleta e análise de dados, verificação experimental das Leis de Newton e estudo de conservação em sistemas físicos.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Matemática Computacional II</h3>
+					<p class="course-summary">Modelagem matemática e computacional aplicada a sistemas e processos, usando operações matriciais, sistemas lineares e funções multivariáveis.</p>
+					<div class="course-info">
+						<span><i class="fas fa-th"></i> Matrizes & Sistemas</span>
+						<span><i class="fas fa-wave-square"></i> Funções Multivariáveis</span>
+					</div>
+					<ul class="course-tags">
+						<li>Matrizes</li>
+						<li>Gradiente</li>
+						<li>Campos Vetoriais</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 9.50</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Modelagem computacional, otimização multivariável, visualização de superfícies e resolução numérica de sistemas lineares.</p>
+					</div>
+				</article>
+
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Química Geral</h3>
+					<p class="course-summary">Estudo da estrutura da matéria, ligações químicas, propriedades dos elementos e reações químicas, com foco em estequiometria e soluções.</p>
+					<div class="course-info">
+						<span><i class="fas fa-atom"></i> Estrutura Atômica</span>
+						<span><i class="fas fa-vial"></i> Reações & Soluções</span>
+					</div>
+					<ul class="course-tags">
+						<li>Átomos</li>
+						<li>Ligações</li>
+						<li>Reações</li>
+						<li>Estequiometria</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 5.63</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Análise de ligações químicas, resolução de problemas estequiométricos e interpretação de propriedades periódicas.</p>
+					</div>
+				</article>
 				
-
-
-
+				<article class="course-card" tabindex="0" data-semester="2">
+					<div class="course-badge">
+						<span>2º semestre</span>
+						<span>30h</span>
+					</div>
+					<h3 class="course-name">Projeto Integrador I</h3>
+					<p class="course-summary">Desenvolvimento de projetos integrando conhecimentos do primeiro ano, aplicando CDIO, sustentabilidade, ética, metodologia científica e práticas de inovação.</p>
+					<div class="course-info">
+						<span><i class="fas fa-project-diagram"></i> CDIO & Projetos</span>
+						<span><i class="fas fa-users"></i> Ética & Extensão</span>
+					</div>
+					<ul class="course-tags">
+						<li>CDIO</li>
+						<li>Planejamento</li>
+						<li>Metodologia Científica</li>
+					</ul>
+					<div class="course-overlay">
+						<p><strong>Média final:</strong> 9.20</p>
+						<p><strong>Período cursado:</strong> 2024/2</p>
+						<p><strong>Destaques:</strong> Concepção e implementação de projetos reais, integração multidisciplinar e práticas de inovação e extensão.</p>
+					</div>
+				</article>
+				
+				
+				
 			</div>
 
-			<p class="section-description" style="margin-top: 3rem;">
-                OBS: Este currículo acadêmico contem períodos cursados distintos, pois entrei no curso através do processo de transferência interna. Aproveitando algumas matérias já cursadas anteriormente no curso de Redes de Computadores. 
-               <br> Sempre que novas disciplinas forem concluídas, esta página será atualizada para refletir o andamento do curso.</p>
+			<p class="section-description" style="margin-top: 3rem;">Sempre que novas disciplinas forem concluídas, esta página será atualizada para refletir o andamento do curso.</p>
 		</div>
 	</section>
 

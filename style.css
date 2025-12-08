@@ -585,6 +585,38 @@ body {
     font-size: 0.95rem;
 }
 
+.courses-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    border-color: var(--primary-color);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.filter-button.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-bg);
+    border-color: transparent;
+}
+
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -599,6 +631,39 @@ body {
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+}
+
+.course-card.is-hidden {
+    display: none;
+}
+
+/* Estado: disciplina ainda não cursada */
+.course-card.not-completed {
+    filter: grayscale(45%);
+    border: 1px dashed var(--border-color);
+}
+
+.course-card.not-completed::after {
+    content: 'Não cursada';
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.8);
+    color: #94A3B8;
+    border: 1px dashed #64748B;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+}
+
+.course-card.not-completed:hover,
+.course-card.not-completed:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .course-card:hover,
@@ -1096,6 +1161,10 @@ textarea.form-control {
 
     .courses-grid {
         grid-template-columns: 1fr;
+    }
+
+    .courses-filter {
+        gap: 0.5rem;
     }
 }
 

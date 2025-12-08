@@ -180,6 +180,39 @@
         // Inicializar partículas após o carregamento da página
         window.addEventListener('load', createParticles);
 
+        // Filtro por semestre na página de currículo
+        function initCourseFilter() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const courseCards = document.querySelectorAll('.courses-grid .course-card');
+            if (!filterButtons.length || !courseCards.length) return;
+
+            function applyFilter(semester) {
+                courseCards.forEach(card => {
+                    const cardSemester = card.getAttribute('data-semester');
+                    if (semester === 'all' || semester === cardSemester) {
+                        card.classList.remove('is-hidden');
+                    } else {
+                        card.classList.add('is-hidden');
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const semester = btn.getAttribute('data-semester-filter');
+                    applyFilter(semester);
+                });
+            });
+
+            // Estado inicial: mostrar todos
+            applyFilter('all');
+        }
+
+        // Inicializar filtros após o carregamento do DOM
+        window.addEventListener('DOMContentLoaded', initCourseFilter);
+
         // Adicionar efeito de digitação ao título hero
         function typeWriter(element, text, speed = 100) {
             let i = 0;
