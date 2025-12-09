@@ -189,7 +189,7 @@
             function applyFilter(semester) {
                 courseCards.forEach(card => {
                     const cardSemester = card.getAttribute('data-semester');
-                    if (semester === 'all' || semester === cardSemester) {
+                    if (semester === cardSemester) {
                         card.classList.remove('is-hidden');
                     } else {
                         card.classList.add('is-hidden');
@@ -206,8 +206,13 @@
                 });
             });
 
-            // Estado inicial: mostrar todos
-            applyFilter('all');
+            // Estado inicial: mostrar 1º semestre
+            const initialBtn = Array.from(filterButtons).find(b => b.getAttribute('data-semester-filter') === '1');
+            if (initialBtn) {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                initialBtn.classList.add('active');
+            }
+            applyFilter('1');
         }
 
         // Inicializar filtros após o carregamento do DOM
