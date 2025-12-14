@@ -67,9 +67,9 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Animar barras de progresso de habilidades
+                    // Animar / renderizar avaliações de habilidades
                     if (entry.target.id === 'skills') {
-                        animateSkillBars();
+                        renderSkillRatings();
                     }
                 }
             });
@@ -79,14 +79,28 @@
             observer.observe(el);
         });
 
-        // Animar barras de progresso de habilidades
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress-bar');
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                setTimeout(() => {
-                    bar.style.width = width + '%';
-                }, 200);
+        // Render star ratings for skills (supports half stars)
+        function renderSkillRatings() {
+            const ratings = document.querySelectorAll('.skill-rating');
+            ratings.forEach(el => {
+                if (el.dataset.rendered) return;
+                const raw = el.getAttribute('data-rating') || '0';
+                const value = Math.max(0, Math.min(5, parseFloat(raw)));
+                const full = Math.floor(value);
+                const half = (value - full) >= 0.5;
+                let html = '';
+                for (let i = 0; i < full; i++) {
+                    html += '<i class="fas fa-star" aria-hidden="true"></i>';
+                }
+                if (half) {
+                    html += '<i class="fas fa-star-half-stroke" aria-hidden="true"></i>';
+                }
+                const empty = 5 - full - (half ? 1 : 0);
+                for (let i = 0; i < empty; i++) {
+                    html += '<i class="far fa-star" aria-hidden="true"></i>';
+                }
+                el.innerHTML = html;
+                el.dataset.rendered = '1';
             });
         }
 

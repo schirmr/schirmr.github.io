@@ -550,6 +550,25 @@ body {
     transition: width 1s ease;
 }
 
+/* Star rating for skills (0..5, suportando metade de uma estrela) */
+.skill-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+}
+.skill-rating i {
+    color: rgba(255,255,255,0.12);
+    transition: color 0.25s ease;
+}
+.skill-rating i.fas {
+    color: var(--primary-color);
+}
+.skill-rating i.fas.fa-star-half-alt,
+.skill-rating i.fas.fa-star-half-stroke {
+    color: var(--primary-color);
+}
+
 .skill-list {
     list-style: none;
 }
