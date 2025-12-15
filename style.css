@@ -409,6 +409,17 @@ body {
     gap: 2rem;
 }
 
+/* Limita na homepage para no máximo 5 projetos na classe .projects-preview */
+.projects-grid.projects-preview > .project-card:nth-child(n+6) {
+    display: none;
+}
+
+#more-projects-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -534,20 +545,6 @@ body {
     justify-content: space-between;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
-}
-
-.skill-progress {
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.skill-progress-bar {
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 5px;
-    transition: width 1s ease;
 }
 
 /* Star rating for skills (0..5, suportando metade de uma estrela) */
