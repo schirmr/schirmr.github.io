@@ -409,8 +409,8 @@ body {
     gap: 2rem;
 }
 
-/* Limita na homepage para no máximo 5 projetos na classe .projects-preview */
-.projects-grid.projects-preview > .project-card:nth-child(n+6) {
+/* Limita na homepage para no máximo 6 projetos na classe .projects-preview */
+.projects-grid.projects-preview > .project-card:nth-child(n+7) {
     display: none;
 }
 
