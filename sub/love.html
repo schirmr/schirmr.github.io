@@ -3,97 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #071023 0%, #0b1220 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #e6eef8;
-        }
-
-        .container {
-            background-color: rgba(10,14,22,0.9);
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(2,6,23,0.7);
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            animation: fadeIn 1s ease-in-out;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
-
-        .icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.6));
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #e6f0ff;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: #a9bdcf;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #4f46e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 700;
-            transition: background 0.25s, transform 0.12s;
-            box-shadow: 0 6px 18px rgba(79,70,229,0.18);
-        }
-
-        .btn:hover {
-            background-color: #4338ca;
-            transform: translateY(-2px);
-        }
-
-        /* Animações */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
+    <title>Coisas que eu gosto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="https://github.com/fluidicon.png">
 </head>
-<body>
+<body class="love-page">
+    <main class="love-wrapper">
+        <header class="love-hero love-block">
+            <div class="hero-top">
+                <a class="back-link" href="../index.html"><i class="fas fa-arrow-left"></i> Voltar</a>
+                <span class="badge"><i class="fas fa-heart"></i> Interesses</span>
+            </div>
+            <h1>Interesses Pessoais</h1>
+            <p class="lead">Uma página mais pessoal, reunindo músicas, filmes, séries, jogos, projetos pessoais e também coisas que me causam conforto.</p>
+            <div class="chips">
+                <span class="chip"><i class="fas fa-music"></i> Música</span>
+                <span class="chip"><i class="fas fa-film"></i> Filmes</span>
+                <span class="chip"><i class="fas fa-tv"></i> Séries</span>
+                <span class="chip"><i class="fas fa-gamepad"></i> Games</span>
+                <span class="chip"><i class="fas fa-project-diagram"></i> Projetos</span>
+                <span class="chip"><i class="fas fa-mug-hot"></i> Conforto</span>
+            </div>
+        </header>
 
-    <div class="container">
-        <span class="icon">🥶</span>
-        <h1>Site em Construção</h1>
-        <p>Estou trabalhando nisso!</p>
-        
-        <a href="../index.html" class="btn">Voltar</a>
-    </div>
+        <section class="love-section love-block">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Playlist pessoal</div>
+                    <h2>Música</h2>
+                </div>
+                <div class="section-note">Minhas faixas de músicas que aprecio, capas de álbuns e tudo que mais gosto.</div>
+            </div>
+            <div class="card-grid">
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-headphones"></i> Artistas, álbuns & capas</div>
+                    <div class="track-hero">
+                        <div class="track-badge"><i class="fas fa-music"></i> Vício agora</div>
+                        <div class="track-title typewriter" data-typewriter-text="Dancing Queen — ABBA">Dancing Queen — ABBA</div>
+                        <div class="track-meta">clássicos 70s • pop</div>
+                    </div>
+                    <p class="card-sub">Alguns dos artistas que fazem parte da minha vida, com as capas que mais gosto.</p>
+                    <ul class="clean-list">
+                        <li><strong>Artistas/Bandas favoritas:</strong> Jorge Ben Jor, ABBA, Iron Maiden, Nirvana.</li>
+                        <li><strong>Álbuns de conforto:</strong> The Number of the Beast, Samba Esquema Novo, A Tábua de Esmeralda.</li>
+                        <li><strong>Clássicos:</strong> Dancing Queen, Mas que nada, Chove Chuva.</li>
+                    </ul>
+                    <div class="pill-row">
+                        <span class="pill primary">Anos 70/80/90</span>
+                        <span class="pill">Rock</span>
+                        <span class="pill">MPB</span>
+                        <span class="pill">Pop</span>
+                        <span class="pill">Samba</span>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/ABBA_Arrival.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>ABBA</strong> — Arrival</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/number_of_the_beast.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Iron Maiden</strong> — The Number of the Beast</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/Samba_esquema_novo.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Jorge Ben</strong> — Samba Esquema Novo</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/tabua_de_esmeralda.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Jorge Ben</strong> — A Tábua de Esmeralda</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
+        <section class="love-section love-block movies-section">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Tela cheia</div>
+                    <h2>Filmes & séries</h2>
+                </div>
+                <div class="section-note">Filmes e séries que mais me divertem.</div>
+            </div>
+            <div class="card-grid">
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-clapperboard"></i> Filmes & séries</div>
+                    <p class="card-sub">Alguns dos filmes e séries que mais me divertem.</p>
+                    <ul class="clean-list">
+                        <li>Filmes: Forrest Gump, Interestelar, O Poderoso Chefão.</li>
+                        <li>Séries: Smilling Friends, Breaking Bad, Better Call Saul.</li>
+                        <li>Animações/animes: Avatar: A Lenda de Aang, Hunter x Hunter, AOT.</li>
+                        <li>Assistindo atualmente: Pluribus & Stranger Things.</li>
+                    </ul>
+                    <div class="pill-row">
+                        <span class="pill primary">Ficção Científica</span>
+                        <span class="pill">Drama</span>
+                        <span class="pill">Comédia</span>
+                        <span class="pill">Animação</span>
+                        <span class="pill">Fantasia</span>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/interestelar.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Filme favorito:</strong> Interestelar</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/smilling_friends.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Série favorita:</strong> Smilling Friends</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/avatar.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Animações:</strong> Avatar: A Lenda de Aang</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/pluribus.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Assistindo</strong>: Pluribus</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="love-section love-block">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Modo jogador</div>
+                    <h2>Games favoritos</h2>
+                </div>
+                <div class="section-note">Franquias, gêneros e multiplayer competitivos para voltar sempre.</div>
+            </div>
+            <div class="card-grid">
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-gamepad"></i> Jogos favoritos</div>
+                    <p class="card-sub">Um pouco dos jogos que fizeram parte da minha vida.</p>
+                    <ul class="clean-list">
+                        <li>Jogos favoritos: Dragon Age Inquisition, The Last of US, RDR2, CS2, Hollow Knight, Resident Evil 2 e RE 4</li>
+                        <li>Gêneros: Roguelike, Soulslike, Puzzles, RPG, FPS competitivo.</li>
+                        <li>Multiplayer competitivo: CS2, Rocket League, Valorant.</li>
+                        <li>CO-OP: It Takes Two, Minecraft, Cuphead, Portal 2.</li>
+                    </ul>
+                    <div class="pill-row">
+                        <span class="pill primary">Roguelike</span>
+                        <span class="pill">Soulslike</span>
+                        <span class="pill">CO-OP</span>
+                        <span class="pill">RPG</span>
+                        <span class="pill">FPS competitivo</span>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/re.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Franquia favorita:</strong> Resident Evil</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/hollow-knight.webp') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Indie:</strong> Hollow Knight</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/It_Takes_Two_capa.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Co-op:</strong> It Takes Two</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/cs2.png') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Sempre jogando:</strong> CS2</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="love-section love-block setup-section">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Tech / setup</div>
+                    <h2>Setup & gadgets</h2>
+                </div>
+                <div class="section-note">Plataformas, periféricos e ferramentas que me acompanham.</div>
+            </div>
+            <div class="card-grid">
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-desktop"></i> Setup atual</div>
+                    <p class="card-sub">Um pouco do lado tech.</p>
+                    <ul class="clean-list">
+                        <li>Plataformas preferidas: PC, Console, Oculus Quest 2 VR.</li>
+                        <li>Processador: Ryzen 5 5600</li>
+                        <li>Placa de Vídeo: RX 7600</li>
+                        <li>Memória RAM: 2x8 GB</li>
+                    </ul>
+                    <div class="pill-row">
+                        <span class="pill primary">PC</span>
+                        <span class="pill">Xbox Series S</span>
+                        <span class="pill">Quest 2</span>
+                        <span class="pill">Notebook: Dell Inspiron 15 3520</span>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/setup-1.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Setup:</strong> Atualizar</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/xbox.png') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Console: </strong> Xbox Series S</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/dell.png') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Notebook:</strong> Dell Inspiron 15 3520</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/quest2.png') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>VR:</strong> Oculus Quest 2</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="love-section love-block projects-section">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Mão na massa</div>
+                    <h2>Projetos & estudos</h2>
+                </div>
+                <div class="section-note">Coisas que estou construindo e aprendendo agora.</div>
+            </div>
+            <div class="card-grid">
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-laptop-code"></i> Projetos & estudos</div>
+                    <p class="card-sub">O que estou construindo e as trilhas de aprendizado em paralelo.</p>
+                    <ul class="clean-list">
+                        <li>Participação da CodeRace: Criação de uma IA para Libras.</li>
+                        <li>Criação de um Website pessoal, para apresentação do meu portfólio.</li>
+                        <li>Site para o Hospital da minha cidade-natal.</li>
+                        <li>Em construção: Emulador de Atari 2600.</li>
+                    </ul>
+                    <div class="pill-row">
+                        <span class="pill primary">Hardware</span>
+                        <span class="pill">Engenharia de Computação</span>
+                        <span class="pill">Computação</span>
+                        <span class="pill">Programação</span>
+                        <span class="pill">Linguagem de Máquina</span>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/project-1.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Projeto atual:</strong> Atari 2600</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/project-2.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Website:</strong> Portfólio Pessoal</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/project-3.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Website:</strong> Hospital da minha cidade-natal</span>
+                        </div>
+                        <div class="cover-tile">
+                            <div class="cover-art" style="background: url('../assets/images/project-4.jpg') center/cover no-repeat;"></div>
+                            <span class="cover-label"><strong>Software:</strong> IA p/ Libras</span>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="love-section love-block quick-section">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Coisas rápidas</div>
+                    <h2>Conforto</h2>
+                </div>
+                <div class="section-note">Espaço para hobbies e hábitos.</div>
+            </div>
+            <div class="card-grid grid-3">
+                <article class="love-card">
+                    <div class="card-title"><i class="fas fa-mug-hot"></i> Cotidiano</div>
+                    <p class="card-sub">Todos os dias tem que ter café, terere ou chimarrão.</p>
+                </article>
+                <article class="love-card">
+                    <div class="card-title"><i class="fa-solid fa-tornado"></i> Hobbies</div>
+                    <p class="card-sub">Gosto muito de ver vídeos de desastres naturais, principalmente sobre tornados.</p>
+                </article>
+                <article class="love-card highlight">
+                    <div class="card-title"><i class="fas fa-seedling"></i> Pequenos passatempos</div>
+                    <p class="card-sub">Gosto de fazer pesquisas e me aprofundar sobre conteúdos variados que aparecem no dia a dia</p>
+                </article>
+            </div>
+        </section>
+
+        <p class="footer-note">Quer trocar ideia sobre qualquer uma dessas coisas? <a href="mailto:schirmr@outlook.com">Me manda um oi</a>.</p>
+    </main>
+
+    <script src="../script.js" defer></script>
 </body>
 </html>

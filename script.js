@@ -1,37 +1,40 @@
-        // Tela de carregamento
+        // Tela de carregamento (se existir)
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
+            if (!loader) return;
             setTimeout(() => {
                 loader.classList.add('hidden');
             }, 1000);
         });
 
-        // Nav mobile
+        // Nav mobile (só se existir no DOM)
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Fechar menu mobile ao clicar em um link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
             });
-        });
 
-        // Efeito de scroll na navbar
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        if (navbar) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
 
         // Link ativo na navegação ao rolar a página
         const sections = document.querySelectorAll('section');
@@ -56,28 +59,27 @@
             });
         });
 
-        // Observador de interseção para animações
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Observador de interseção para animações (só em páginas com fade-in)
+        const fadeElements = document.querySelectorAll('.fade-in');
+        if (fadeElements.length) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    
-                    // Animar / renderizar avaliações de habilidades
-                    if (entry.target.id === 'skills') {
-                        renderSkillRatings();
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.id === 'skills') {
+                            renderSkillRatings();
+                        }
                     }
-                }
-            });
-        }, observerOptions);
+                });
+            }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+            fadeElements.forEach(el => observer.observe(el));
+        }
 
         // Render star ratings for skills (supports half stars)
         function renderSkillRatings() {
@@ -107,13 +109,15 @@
         // Botão voltar ao topo
         const backToTopButton = document.getElementById('back-to-top');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+        }
 
         function scrollToTop() {
             window.scrollTo({
@@ -164,6 +168,7 @@
         // Adicionar efeito de partículas interativas na seção hero
         function createParticles() {
             const hero = document.querySelector('.hero');
+            if (!hero) return;
             const particleCount = 50;
             
             for (let i = 0; i < particleCount; i++) {
@@ -233,7 +238,7 @@
         window.addEventListener('DOMContentLoaded', initCourseFilter);
 
         // Adicionar efeito de digitação ao título hero
-        function typeWriter(element, text, speed = 100) {
+        function typeWriter(element, text, speed = 100, delay = 1500) {
             let i = 0;
             element.textContent = '';
             
@@ -245,7 +250,7 @@
                 }
             }
             
-            setTimeout(type, 1500);
+            setTimeout(type, delay);
         }
 
         // Inicializar efeito de digitação
@@ -256,3 +261,56 @@
                 typeWriter(heroTitle, typewriterText, 150);
             }
         });
+
+        // Página de interesses (love.html): animação de entrada + parallax
+        function initLovePage() {
+            const wrapper = document.querySelector('.love-wrapper');
+            const blocks = Array.from(document.querySelectorAll('.love-block'));
+            if (!wrapper || !blocks.length) return;
+
+            const trackTitle = document.querySelector('.track-title.typewriter');
+            if (trackTitle) {
+                const text = trackTitle.getAttribute('data-typewriter-text') || trackTitle.textContent.trim();
+                typeWriter(trackTitle, text, 200, 320);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const idx = blocks.indexOf(entry.target);
+                        if (idx >= 0) {
+                            entry.target.style.animationDelay = `${0.12 * idx}s`;
+                        }
+                        entry.target.classList.add('entered');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+            blocks.forEach((el) => observer.observe(el));
+
+            let ticking = false;
+            const update = () => {
+                const y = window.scrollY || window.pageYOffset;
+                wrapper.style.setProperty('--parallax', `${y}px`);
+                wrapper.style.setProperty('--parallax-rev', `${y}px`);
+
+                blocks.forEach((el, idx) => {
+                    const depth = idx % 2 === 0 ? 0.012 : -0.01;
+                    el.style.translate = `0 ${y * depth}px`;
+                });
+
+                ticking = false;
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(update);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            update();
+        }
+
+        window.addEventListener('DOMContentLoaded', initLovePage);
