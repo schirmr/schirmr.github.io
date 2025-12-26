@@ -778,6 +778,14 @@ ul.clean-list li::before {
     .love-page { padding: 1.25rem 1rem 2rem; }
     .love-hero { padding: 1.5rem; }
     .section-head { flex-direction: column; align-items: flex-start; }
+    .love-wrapper { overflow-x: clip; overflow-y: visible; }
+    @supports not (overflow: clip) {
+        .love-wrapper { overflow: hidden; }
+    }
+    .love-wrapper::before,
+    .love-wrapper::after { display: none; content: none; }
+    .love-page { background: var(--dark-bg); }
+    .track-title { white-space: normal; }
 }
 
 /* Section styles */
