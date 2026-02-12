@@ -1,7 +1,9 @@
-        // Atualizar ano automaticamente no footer
-        direitos = document.getElementById("direitos");
-        anoAtual = new Date().getFullYear();
-        direitos.innerHTML = `&copy; ${anoAtual}. Todos os direitos reservados. | Feito com ❤️ por Gabriel Lorenson Schirmer`;
+        // Atualizar ano automaticamente no footer (somente se o elemento existir)
+        const direitos = document.getElementById("direitos");
+        if (direitos) {
+            const anoAtual = new Date().getFullYear();
+            direitos.innerHTML = `&copy; ${anoAtual}. Todos os direitos reservados. | Feito com ❤️ por Gabriel Lorenson Schirmer`;
+        }
         
         // Tela de carregamento (se existir)
         window.addEventListener('load', function() {
